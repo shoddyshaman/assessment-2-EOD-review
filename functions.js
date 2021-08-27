@@ -1,4 +1,3 @@
-
 //////////////////PROBLEM 1////////////////////
 /*
   Create a function called 'sum' that takes in two parameters, 'num1' and 'num2'. 
@@ -6,7 +5,9 @@
 */
 
 //CODE HERE
-
+function sum(num1, num2) {
+  return num1 + num2;
+}
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -17,7 +18,13 @@
 */
 
 //CODE HERE
-
+function greaterThanFive(number) {
+  if (number > 5) {
+    return true;
+  } else {
+    return false;
+  }
+}
 //////////////////PROBLEM 3////////////////////
 /*
   Create a function called 'findZWords' that takes in one parameter, 'word'. 
@@ -27,7 +34,17 @@
 */
 
 //CODE HERE
+function findZWords(word) {
+  if (word.toLowerCase().startsWith("z")) {
+    return "the name begins with Z";
+  } else {
+    return "the name does not begin with Z";
+  }
+}
 
+console.log(findZWords("zebra"));
+console.log(findZWords("Zack"));
+console.log(findZWords("debra"));
 //////////////////PROBLEM 4////////////////////
 /*
   Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. 
@@ -36,3 +53,8 @@
 */
 
 //CODE HERE
+function iLove(name, love) {
+  return `${name} loves ${love}`;
+}
+
+console.log(iLove("DJ", "basketball"));

@@ -15,8 +15,25 @@
 */
 
 //CODE HERE
-
-
+let me = {
+  firstName: 'Dhananjoy',
+  state: 'Colorado',
+  age: 31,
+  greeter: function(){
+    return `Hello! My Name is ${me.firstName} and i live in ${me.state}`
+  },
+  hobbies:{
+    outdoor:['basketball', 'hiking', 'rock climbing'],
+    indoor:{
+      activity1:'watching anime',
+      activity2:'playing video games'
+    }
+  }
+}     
+console.log(me)
+// console.log(me.greeter())
+// console.log(me.hobbies.outdoor[1])
+// console.log(me.hobbies.indoor.activity2)
 
 
 
@@ -45,3 +62,18 @@
 */
 
 //CODE HERE
+function carFactory(make,model,year){
+  let carObj = {
+    make:make,
+    model:model,
+    year:year
+  }
+  if(carObj.year > 2018){
+    carObj.isNew = true
+  } else {
+    carObj.isNew = false
+  } return carObj
+}
+
+let VW = carFactory('Volkswagon','Tiguan',2019)
+console.log(VW)

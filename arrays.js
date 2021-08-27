@@ -1,26 +1,31 @@
 //////////////////PROBLEM 1////////////////////
 /* Create a copy of the faveColors array called 'colorCopy' using the slice method. */
 
-const faveColors = ['red', 'green', 'black']
+const faveColors = ["red", "green", "black"];
 
 //CODE HERE
+// let colorCopy = faveColors.slice();
+// spread operator
+let colorCopy = [...faveColors];
 
 //////////////////PROBLEM 2////////////////////
 /* Add a fourth color to the end of the 'colorCopy' array using the push method. */
 
 //CODE HERE
-
+colorCopy.push("RebeccaPurple");
+console.log(colorCopy);
 //////////////////PROBLEM 3////////////////////
 /*
   Using an array method, create a new array called 'middleNums' from the 
   numbers array that will capture only the middle numbers (2, 3, 4).
 */
 
-const numbers = [1, 2, 3, 4, 5]
+const numbers = [1, 2, 3, 4, 5];
 
 //CODE HERE
-
-
+// const middleNums = numbers.splice(1, 3);
+const middleNums = numbers.slice(1,4)
+console.log(middleNums);
 //////////////////PROBLEM 4////////////////////
 /* 
   Create a function called 'bigOrSmall' that takes in one parameter, 'arr', 
@@ -35,3 +40,16 @@ const numbers = [1, 2, 3, 4, 5]
 */
 
 // CODE HERE
+function bigOrSmall(arr){
+  let answers = [];
+  for(let i = 0; i < arr.length;i++){
+    if(arr[i] > 100){
+      answers.push('big')
+    } else {
+      answers.push('small')
+    }
+  } return answers
+}
+
+let numArr = [102,100,34,76,234,98,786]
+console.log(bigOrSmall(numArr))
